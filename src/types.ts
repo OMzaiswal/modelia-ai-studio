@@ -2,16 +2,16 @@
 
 export type StyleOption = "Editorial" | "Streetwear" | "Vintage";
 
-export interface GenerationRequest {
-    imageDataUrl: string;
+export interface GenerateRequest {
+    image: File | null;
     prompt: string;
-    style: StyleOption;
+    style: string;
 }
 
-export interface GenerationResponse {
+export interface GenerateResponse {
     id: string;
     imageUrl: string;
     prompt: string;
-    style: StyleOption;
+    style: string;
     createdAt: string;
 }
