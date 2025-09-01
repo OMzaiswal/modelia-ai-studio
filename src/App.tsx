@@ -4,7 +4,7 @@ import StyleDropdown from './components/StyleDropdown';
 import Upload from './components/Upload'
 import { useState } from 'react';
 import type { GenerateRequest, GenerateResponse } from './types';
-import { saveToHistory, getHistory } from './lib/history';
+import { saveToHistory } from './lib/history';
 import { retryWithBackoff } from './lib/retry';
 import { GenerateImage } from './lib/api';
 import History from './components/History'
