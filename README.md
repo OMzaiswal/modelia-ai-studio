@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# Modelia AI Studio (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + TypeScript app simulating a simplified AI studio.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Upload & preview images** (PNG/JPG ≤10MB)  
+- **Input prompt & select style** (Editorial, Streetwear, Vintage)  
+- **Mock AI generation** with loading, retry, and abort  
+- **Save last 5 generations** in localStorage (history)  
+- **Accessible** keyboard navigation & focus states  
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript (Vite)  
+- TailwindCSS 
+- React Testing Library (unit tests included)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+```bash
+git clone https://github.com/OMzaiswal/modelia-ai-studio.git
+cd modelia
+npm install
+npm run dev
+Open http://localhost:5173 in your browser.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Running Tests
+bash
+Copy code
+npm test
+25 unit tests included for components like History.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Tests were entirely written by Cursor AI, screenshots in /evidence.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Pull Requests
+PR 1: [[Link to PR 1]](`https://github.com/OMzaiswal/modelia-ai-studio/pull/1`) – Main feature implementation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+PR 2: [[Link to PR 2]](`https://github.com/OMzaiswal/modelia-ai-studio/pull/2`) – Additional features, bug fixes, and code refactoring
+
+** AI Usage **
+-I leveraged AI tools (ChatGPT and Cursor) to:
+-Write React + TypeScript components.
+-Implement and refactor 25 unit tests for History and other features (all tests written by Cursor; screenshots included in evidence/ folder).
+-Debug runtime issues and optimize performance.
+-Draft commit messages and PR descriptions.
+
+
+your-repo/
+ ├─ src/
+ ├─ public/
+ ├─ evidence/       # Screenshots or other proofs
+ ├─ README.md
+
+
+## Notes
+
+- Please check the merged PRs for full implementation details.
+- This project demonstrates React + TypeScript skills, unit testing (Cursor-assisted), and accessibility.
+- All deliverables, including source code, PRs, AI notes, and test files, are included in this repository.
